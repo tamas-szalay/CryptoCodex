@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B6FF4AE2B7FC324000CB1D7 /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301EC2B7FC142006BA0F8 /* CurrencyListView.swift */; };
 		0B9301AD2B7FBD38006BA0F8 /* CyptoCodexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301AC2B7FBD38006BA0F8 /* CyptoCodexApp.swift */; };
-		0B9301AF2B7FBD38006BA0F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301AE2B7FBD38006BA0F8 /* ContentView.swift */; };
+		0B9301AF2B7FBD38006BA0F8 /* CurrencyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301AE2B7FBD38006BA0F8 /* CurrencyDetailsView.swift */; };
 		0B9301B12B7FBD3A006BA0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9301B02B7FBD3A006BA0F8 /* Assets.xcassets */; };
 		0B9301B42B7FBD3A006BA0F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9301B32B7FBD3A006BA0F8 /* Preview Assets.xcassets */; };
 		0B9301BE2B7FBD3A006BA0F8 /* CyptoCodexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301BD2B7FBD3A006BA0F8 /* CyptoCodexTests.swift */; };
 		0B9301C82B7FBD3B006BA0F8 /* CyptoCodexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301C72B7FBD3B006BA0F8 /* CyptoCodexUITests.swift */; };
 		0B9301CA2B7FBD3B006BA0F8 /* CyptoCodexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301C92B7FBD3B006BA0F8 /* CyptoCodexUITestsLaunchTests.swift */; };
+		0B9301E02B7FBE2B006BA0F8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301DF2B7FBE2B006BA0F8 /* main.swift */; };
+		0B9301E22B7FBE7E006BA0F8 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301E12B7FBE7E006BA0F8 /* DI.swift */; };
+		0B9301E52B7FBECA006BA0F8 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301E32B7FBECA006BA0F8 /* RouterView.swift */; };
+		0B9301E62B7FBECA006BA0F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301E42B7FBECA006BA0F8 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		0B9301A92B7FBD38006BA0F8 /* CyptoCodex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyptoCodex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9301AC2B7FBD38006BA0F8 /* CyptoCodexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCodexApp.swift; sourceTree = "<group>"; };
-		0B9301AE2B7FBD38006BA0F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0B9301AE2B7FBD38006BA0F8 /* CurrencyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsView.swift; sourceTree = "<group>"; };
 		0B9301B02B7FBD3A006BA0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9301B32B7FBD3A006BA0F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B9301B92B7FBD3A006BA0F8 /* CyptoCodexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCodexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,11 @@
 		0B9301C32B7FBD3B006BA0F8 /* CyptoCodexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoCodexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9301C72B7FBD3B006BA0F8 /* CyptoCodexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCodexUITests.swift; sourceTree = "<group>"; };
 		0B9301C92B7FBD3B006BA0F8 /* CyptoCodexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyptoCodexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B9301DF2B7FBE2B006BA0F8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0B9301E12B7FBE7E006BA0F8 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
+		0B9301E32B7FBECA006BA0F8 /* RouterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		0B9301E42B7FBECA006BA0F8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0B9301EC2B7FC142006BA0F8 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,16 @@
 		0B9301AB2B7FBD38006BA0F8 /* CyptoCodex */ = {
 			isa = PBXGroup;
 			children = (
-				0B9301AC2B7FBD38006BA0F8 /* CyptoCodexApp.swift */,
-				0B9301AE2B7FBD38006BA0F8 /* ContentView.swift */,
+				0B9301D72B7FBD91006BA0F8 /* Application */,
+				0B9301D62B7FBD82006BA0F8 /* Core */,
+				0B9301D82B7FBD99006BA0F8 /* DI */,
+				0B9301DD2B7FBDD7006BA0F8 /* Model */,
+				0B9301DA2B7FBDB9006BA0F8 /* Network */,
+				0B9301D92B7FBDA8006BA0F8 /* Router */,
+				0B9301DC2B7FBDD0006BA0F8 /* Services */,
+				0B9301DE2B7FBDDC006BA0F8 /* UI */,
+				0B9301E72B7FBFE1006BA0F8 /* ViewModel */,
+				0B9301DB2B7FBDC2006BA0F8 /* Repositories */,
 				0B9301B02B7FBD3A006BA0F8 /* Assets.xcassets */,
 				0B9301B22B7FBD3A006BA0F8 /* Preview Content */,
 			);
@@ -125,6 +143,115 @@
 				0B9301C92B7FBD3B006BA0F8 /* CyptoCodexUITestsLaunchTests.swift */,
 			);
 			path = CyptoCodexUITests;
+			sourceTree = "<group>";
+		};
+		0B9301D62B7FBD82006BA0F8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0B9301D72B7FBD91006BA0F8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301AC2B7FBD38006BA0F8 /* CyptoCodexApp.swift */,
+				0B9301DF2B7FBE2B006BA0F8 /* main.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0B9301D82B7FBD99006BA0F8 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301E12B7FBE7E006BA0F8 /* DI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		0B9301D92B7FBDA8006BA0F8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301E42B7FBECA006BA0F8 /* Router.swift */,
+				0B9301E32B7FBECA006BA0F8 /* RouterView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		0B9301DA2B7FBDB9006BA0F8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0B9301DB2B7FBDC2006BA0F8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0B9301DC2B7FBDD0006BA0F8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0B9301DD2B7FBDD7006BA0F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B9301DE2B7FBDDC006BA0F8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301E92B7FC07A006BA0F8 /* Components */,
+				0B9301E82B7FC075006BA0F8 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0B9301E72B7FBFE1006BA0F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B9301E82B7FC075006BA0F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301EA2B7FC082006BA0F8 /* CurrencyList */,
+				0B9301EB2B7FC088006BA0F8 /* CurrencyDetails */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B9301E92B7FC07A006BA0F8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B9301EA2B7FC082006BA0F8 /* CurrencyList */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301EC2B7FC142006BA0F8 /* CurrencyListView.swift */,
+			);
+			path = CurrencyList;
+			sourceTree = "<group>";
+		};
+		0B9301EB2B7FC088006BA0F8 /* CurrencyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0B9301AE2B7FBD38006BA0F8 /* CurrencyDetailsView.swift */,
+			);
+			path = CurrencyDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9301AF2B7FBD38006BA0F8 /* ContentView.swift in Sources */,
+				0B9301E22B7FBE7E006BA0F8 /* DI.swift in Sources */,
+				0B9301AF2B7FBD38006BA0F8 /* CurrencyDetailsView.swift in Sources */,
+				0B6FF4AE2B7FC324000CB1D7 /* CurrencyListView.swift in Sources */,
 				0B9301AD2B7FBD38006BA0F8 /* CyptoCodexApp.swift in Sources */,
+				0B9301E02B7FBE2B006BA0F8 /* main.swift in Sources */,
+				0B9301E62B7FBECA006BA0F8 /* Router.swift in Sources */,
+				0B9301E52B7FBECA006BA0F8 /* RouterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CyptoCodex/Preview Content\"";
+				DEVELOPMENT_TEAM = 6646P5C3D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CyptoCodex/Preview Content\"";
+				DEVELOPMENT_TEAM = 6646P5C3D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

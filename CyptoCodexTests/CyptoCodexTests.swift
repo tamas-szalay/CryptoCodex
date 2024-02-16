@@ -1,10 +1,3 @@
-//
-//  CyptoCodexTests.swift
-//  CyptoCodexTests
-//
-//  Created by Tamás Szalay on 2024. 02. 16..
-//
-
 import XCTest
 @testable import CyptoCodex
 

@@ -1,10 +1,3 @@
-//
-//  CyptoCodexUITestsLaunchTests.swift
-//  CyptoCodexUITests
-//
-//  Created by Tamás Szalay on 2024. 02. 16..
-//
-
 import XCTest
 
 final class CyptoCodexUITestsLaunchTests: XCTestCase {
