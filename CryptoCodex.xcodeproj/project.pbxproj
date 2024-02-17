@@ -31,9 +31,9 @@
 		0B9301E52B7FBECA006BA0F8 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301E32B7FBECA006BA0F8 /* RouterView.swift */; };
 		0B9301E62B7FBECA006BA0F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9301E42B7FBECA006BA0F8 /* Router.swift */; };
 		0BC221082B800A8900ED7137 /* NavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC221072B800A8900ED7137 /* NavigationTitle.swift */; };
-		0BF10F8A2B80E20F00BADE34 /* Font+application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F892B80E20F00BADE34 /* Font+application.swift */; };
+		0BF10F8A2B80E20F00BADE34 /* Font+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F892B80E20F00BADE34 /* Font+Application.swift */; };
 		0BF10F8C2B80E60100BADE34 /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F8B2B80E60100BADE34 /* CurrencyListViewModel.swift */; };
-		0BF10F8F2B81048100BADE34 /* EdgeInstets+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F8E2B81048100BADE34 /* EdgeInstets+helper.swift */; };
+		0BF10F8F2B81048100BADE34 /* EdgeInstets+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F8E2B81048100BADE34 /* EdgeInstets+Helper.swift */; };
 		0BF10F912B8109B100BADE34 /* NumberFormatter+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F902B8109B100BADE34 /* NumberFormatter+Currency.swift */; };
 		0BF10F932B81246500BADE34 /* Assets.json in Resources */ = {isa = PBXBuildFile; fileRef = 0BF10F922B81246500BADE34 /* Assets.json */; };
 		0BF10F952B8124A400BADE34 /* MockHttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF10F942B8124A400BADE34 /* MockHttpConnection.swift */; };
@@ -84,9 +84,9 @@
 		0B9301E42B7FBECA006BA0F8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0B9301EC2B7FC142006BA0F8 /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
 		0BC221072B800A8900ED7137 /* NavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitle.swift; sourceTree = "<group>"; };
-		0BF10F892B80E20F00BADE34 /* Font+application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+application.swift"; sourceTree = "<group>"; };
+		0BF10F892B80E20F00BADE34 /* Font+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Application.swift"; sourceTree = "<group>"; };
 		0BF10F8B2B80E60100BADE34 /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
-		0BF10F8E2B81048100BADE34 /* EdgeInstets+helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInstets+helper.swift"; sourceTree = "<group>"; };
+		0BF10F8E2B81048100BADE34 /* EdgeInstets+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInstets+Helper.swift"; sourceTree = "<group>"; };
 		0BF10F902B8109B100BADE34 /* NumberFormatter+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Currency.swift"; sourceTree = "<group>"; };
 		0BF10F922B81246500BADE34 /* Assets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Assets.json; sourceTree = "<group>"; };
 		0BF10F942B8124A400BADE34 /* MockHttpConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpConnection.swift; sourceTree = "<group>"; };
@@ -332,8 +332,8 @@
 		0BF10F8D2B81046900BADE34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0BF10F892B80E20F00BADE34 /* Font+application.swift */,
-				0BF10F8E2B81048100BADE34 /* EdgeInstets+helper.swift */,
+				0BF10F892B80E20F00BADE34 /* Font+Application.swift */,
+				0BF10F8E2B81048100BADE34 /* EdgeInstets+Helper.swift */,
 				0BF10F902B8109B100BADE34 /* NumberFormatter+Currency.swift */,
 			);
 			path = Extensions;
@@ -460,7 +460,7 @@
 				0BC221082B800A8900ED7137 /* NavigationTitle.swift in Sources */,
 				0BF10F9F2B814BF600BADE34 /* PriceChangeText.swift in Sources */,
 				0B6FF4BA2B7FE163000CB1D7 /* AssetsDto.swift in Sources */,
-				0BF10F8A2B80E20F00BADE34 /* Font+application.swift in Sources */,
+				0BF10F8A2B80E20F00BADE34 /* Font+Application.swift in Sources */,
 				0BF10F9B2B8131B800BADE34 /* CurrencyDetailsViewModel.swift in Sources */,
 				0B9301E02B7FBE2B006BA0F8 /* main.swift in Sources */,
 				0B6FF4B22B7FC768000CB1D7 /* HttpConnection.swift in Sources */,
@@ -470,7 +470,7 @@
 				0B6FF4B72B7FDE99000CB1D7 /* AssetsRemoteRepository.swift in Sources */,
 				0B6FF4BE2B7FE25B000CB1D7 /* Currency.swift in Sources */,
 				0B9301E52B7FBECA006BA0F8 /* RouterView.swift in Sources */,
-				0BF10F8F2B81048100BADE34 /* EdgeInstets+helper.swift in Sources */,
+				0BF10F8F2B81048100BADE34 /* EdgeInstets+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
