@@ -32,7 +32,6 @@ class CurrencyListViewModel: ObservableObject {
                 .sink(receiveCompletion: { [weak self] completion in
                     switch completion {
                     case .failure(let error):
-                        print(error)
                         self?.state = .failed(error)
                     case .finished:
                         return

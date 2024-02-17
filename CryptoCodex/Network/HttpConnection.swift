@@ -64,7 +64,7 @@ final class HttpConnectionImpl: HttpConnection {
                 do {
                     return try JSONDecoder().decode(T.self, from: data)
                 } catch let error {
-                    debugPrint("Parsing error: \(error)")
+                    Logger.networking.debug("Parsing error: \(error)")
                     throw CCError.jsonParsingError
                 }
             }).mapError({ error in

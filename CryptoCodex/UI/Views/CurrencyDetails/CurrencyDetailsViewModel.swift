@@ -34,14 +34,13 @@ class CurrencyDetailsViewModel: ObservableObject {
                 .sink(receiveCompletion: { [weak self] completion in
                     switch completion {
                     case .failure(let error):
-                        print(error)
                         self?.state = .failed
                     case .finished:
                         return
                     }
                 }, receiveValue: { [weak self] result in
-                    self?.state = .idle
                     self?.currency = result
+                    self?.state = .idle
                 })
         }
     }
