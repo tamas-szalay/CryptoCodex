@@ -34,7 +34,7 @@ struct CurrencyListView: View {
             case .failed:
                 VStack(alignment: .center, spacing: 20) {
 
-                    Text("CurrencyListErrorMessage").font(.applicationBold(size: 24))
+                    Text("CurrencyListErrorMessage").font(.applicationBold(size: 24)).foregroundStyle(.fgDefault)
                     Button {
                         viewModel.load()
                     } label: {
@@ -45,7 +45,7 @@ struct CurrencyListView: View {
             case .empty:
                 VStack(alignment: .center, spacing: 20) {
                     Image(systemName: "doc").resizable().frame(width: 50, height: 50, alignment: .center)
-                    Text("CurrencyListEmptyMessage").font(.applicationRegular(size: 20))
+                    Text("CurrencyListEmptyMessage").font(.applicationRegular(size: 24)).foregroundStyle(.fgDefault)
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
