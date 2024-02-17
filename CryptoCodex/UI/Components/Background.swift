@@ -14,7 +14,7 @@ struct Background<Content> : View where Content : View  {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [.gradientStart.opacity(0.3), .gradientEnd.opacity(0.3)]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             content
-        }.toolbarBackground(.hidden, for: .navigationBar)
+        }.toolbarBackground(.hidden, for: .navigationBar).background(.bgDefault)
     }
     
 }

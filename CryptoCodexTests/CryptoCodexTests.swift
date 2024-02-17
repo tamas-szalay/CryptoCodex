@@ -2,7 +2,7 @@ import XCTest
 @testable import CryptoCodex
 
 final class CryptoCodexTests: XCTestCase {
-
+    
     func testAssetsRepository_List() throws {
         let searchString = "swift"
         
@@ -32,7 +32,7 @@ final class CryptoCodexTests: XCTestCase {
         
         XCTAssertEqual(response.data.count, 10, "Assets response count mismatch")
     }
-
+    
     func testCurrencyService_List() throws {
         
         let repository = AssetsRemoteRepository(httpConnection: MockHttpConnection(mockCallback: { path, method, query in
@@ -44,16 +44,18 @@ final class CryptoCodexTests: XCTestCase {
         let response = try awaitPublisher(service.getCurrencies())
         
         XCTAssertEqual(response.count, 10, "Currencies count mismatch")
-        XCTAssertEqual(response.first!.id, "bitcoin", "Id not matches")
+        XCTAssertEqual(response.first!.id, "bitcoin", "Id mismatch")
         XCTAssertEqual(response.first!.iconUrl, "https://assets.coincap.io/assets/icons/btc@2x.png", "Icon URL mismatch")
-        XCTAssertEqual(response.first!.symbol, "BTC", "Id not matches")
-        XCTAssertEqual(response.first!.name, "Bitcoin", "Id not matches")
-        XCTAssertEqual(response.first!.supply, 17193925, "Id not matches")
-        XCTAssertEqual(response.first!.price, Decimal(string: "6929.8217756835584756"), "Id not matches")
-        XCTAssertEqual(response.first!.changePercent24Hr, Decimal(string: "-0.8101417214350335"), "Id not matches")
+        XCTAssertEqual(response.first!.symbol, "BTC", "Symbol mismatch")
+        XCTAssertEqual(response.first!.name, "Bitcoin", "Name mismatch")
+        XCTAssertEqual(response.first!.supply, 17193925, "Supply mismatch")
+        XCTAssertEqual(response.first!.price, Decimal(string: "6929.8217756835584756"), "Price mismatch")
+        XCTAssertEqual(response.first!.changePercent24Hr, Decimal(string: "-0.8101417214350335"), "Change percent mismatch")
+        XCTAssertEqual(response.first!.volume24Hr, Decimal(string: "2927959461.1750323310959460"), "Volume mismatch")
+        XCTAssertEqual(response.first!.marketCap, Decimal(string: "119150835874.4699281625807300"), "Market cap mismatch")
         
     }
-
+    
     func testCurrencyListViewmodel_Success() throws {
         let repository = AssetsRemoteRepository(httpConnection: MockHttpConnection(mockCallback: { path, method, query in
             let url = Bundle(for: type(of: self)).url(forResource: "Assets", withExtension: "json")
@@ -61,7 +63,7 @@ final class CryptoCodexTests: XCTestCase {
         }))
         
         let service = CurrencyServiceImpl(repository: repository)
-        let viewmodel = CurrencyViewModel(currencyService: service)
+        let viewmodel = CurrencyListViewModel(currencyService: service)
         
         XCTAssertTrue(viewmodel.state == .loading, "Initial loading state missing")
         
@@ -89,7 +91,7 @@ final class CryptoCodexTests: XCTestCase {
         }))
         
         let service = CurrencyServiceImpl(repository: repository)
-        let viewmodel = CurrencyViewModel(currencyService: service)
+        let viewmodel = CurrencyListViewModel(currencyService: service)
         
         XCTAssertTrue(viewmodel.state == .loading, "Initial loading state missing")
         
@@ -118,10 +120,10 @@ final class CryptoCodexTests: XCTestCase {
         }))
         
         let service = CurrencyServiceImpl(repository: repository)
-        let viewmodel = CurrencyViewModel(currencyService: service)
+        let viewmodel = CurrencyListViewModel(currencyService: service)
         
         XCTAssertTrue(viewmodel.state == .loading, "Initial loading state missing")
-
+        
         let emptyExpectation = XCTestExpectation(description: "Empty state")
         
         let cancellable = viewmodel.$state

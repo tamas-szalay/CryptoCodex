@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import OSLog
 
 enum HttpMethod: String {
     case GET, POST, PUT
@@ -48,6 +49,17 @@ final class HttpConnectionImpl: HttpConnection {
         url.queryItems = queryParameters?.map({ URLQueryItem(name: $0, value: $1)})
         
         return URLSession.shared.dataTaskPublisher(for: url.url!)
+            .handleEvents(receiveOutput: { output in
+                Logger.networking.debug("\(method.rawValue) \(output.response.url?.absoluteString ?? "") Success\ndata: \(String(data: output.data, encoding: .utf8) ?? "")")
+            }, receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    Logger.networking.debug("\(method.rawValue) \(url.url!.absoluteString) Error \(error.errorCode)")
+                    break
+                default:
+                    break
+                }
+            })
             .tryMap({ (data, response) throws -> T in
                 do {
                     return try JSONDecoder().decode(T.self, from: data)
@@ -71,6 +83,6 @@ final class HttpConnectionImpl: HttpConnection {
 
 extension URL {
     func with(endpoint: ApiEndpoints) -> URL {
-        return appendingPathComponent(endpoint.rawValue)
+        return appendingPathComponent(endpoint.asPathComponent)
     }
 }

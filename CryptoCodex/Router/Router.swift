@@ -3,7 +3,7 @@ import SwiftUI
 class Router: ObservableObject {
     enum Route: Hashable {
         case currencyList
-        case currencyDetails
+        case currencyDetails(Currency)
     }
 
     let container: DIContainer
@@ -16,9 +16,9 @@ class Router: ObservableObject {
     @ViewBuilder func view(for route: Route) -> some View {
         switch route {
         case .currencyList:
-            CurrencyListView(viewModel: CurrencyViewModel(currencyService: container.resolve()))
-        case .currencyDetails:
-            CurrencyDetailsView()
+            CurrencyListView(viewModel: CurrencyListViewModel(currencyService: container.resolve()))
+        case .currencyDetails(let currency):
+            CurrencyDetailsView(viewModel: CurrencyDetailsViewModel(currencyService: container.resolve(), currency: currency))
         }
     }
 

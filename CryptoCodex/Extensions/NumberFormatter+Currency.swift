@@ -13,32 +13,36 @@ extension NumberFormatter {
         
         return ""
     }
-    
+  
     static func priceFormat(_ number: Decimal) -> String {
+        return abbreviationFormat(number, suffix: "$")
+    }
+    
+    static func abbreviationFormat(_ number: Decimal, suffix: String = "") -> String {
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         
-        let abbreviations: [PriceAbbreviation] = [.init(value: pow(10, 9), suffix: "B"), .init(value: pow(10, 6), suffix: "M"), .init(value: pow(10, 3), suffix: "K")]
+        let abbreviations: [Abbreviation] = [.init(value: pow(10, 9), postfix: "B"), .init(value: pow(10, 6), postfix: "M"), .init(value: pow(10, 3), postfix: "K")]
         
-        var suffix = ""
+        var postfix = ""
         var simplifiedNumber = number
         
         if let abbreviation = abbreviations.first(where: { number >= $0.value }) {
-            suffix = abbreviation.suffix
+            postfix = abbreviation.postfix
             simplifiedNumber = number / abbreviation.value
         }
         
         if let text = formatter.string(from: NSDecimalNumber(decimal: simplifiedNumber)) {
-            return "$" + text + suffix
+            return suffix + text + postfix
         }
         
         return ""
     }
     
-    private struct PriceAbbreviation {
+    private struct Abbreviation {
         let value: Decimal
-        let suffix: String
+        let postfix: String
     }
     
 }

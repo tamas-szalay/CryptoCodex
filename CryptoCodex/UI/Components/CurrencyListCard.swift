@@ -20,7 +20,7 @@ struct CurrencyListCard: View {
                         HStack(alignment: .bottom) {
                             Text(currency.symbol).font(.applicationRegular(size: 16))
                             Spacer()
-                            priceChangeText
+                            PriceChangeText(priceChange: currency.changePercent24Hr)
                         }
                         Image("ArrowRight")
                     }
@@ -29,17 +29,26 @@ struct CurrencyListCard: View {
             }).foregroundColor(.fgDefault).buttonStyle(.borderless)
         }
     }
-    
-    private var priceChangeText: Text {
-        let text = NumberFormatter.changePercentFormat(currency.changePercent24Hr)
-        return Text(text).font(.applicationBold(size: 16)).foregroundStyle(currency.changePercent24Hr > 0 ? .fgPositive : .fgNegative)
-    }
+
 }
 
 #Preview {
     Background {
         VStack(alignment: .center) {
-            CurrencyListCard(action: {}, currency: .init(id: "bitcoin", iconUrl: "https://assets.coincap.io/assets/icons/btc@2x.png", name: "Bitcoin", symbol: "BTC", price: 52125.4826244694223675, changePercent24Hr: -0.3408334710299703, supply: 19629518)).padding()
+            CurrencyListCard(
+                action: {},
+                currency: .init(
+                    id: "bitcoin",
+                    iconUrl: "https://assets.coincap.io/assets/icons/btc@2x.png",
+                    name: "Bitcoin",
+                    symbol: "BTC",
+                    price: 52125.48,
+                    changePercent24Hr: -0.34,
+                    supply: 19629518,
+                    volume24Hr: 2927959461.18,
+                    marketCap: 119150835874.47
+                )
+            ).padding()
         }
     }
     

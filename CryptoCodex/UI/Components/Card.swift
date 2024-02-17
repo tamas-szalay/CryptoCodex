@@ -20,7 +20,7 @@ struct Card<Content> : View where Content : View  {
 #Preview {
     Background {
         Card(padding: .all(20)) {
-            Text("Text")
+            
         }.padding()
     }
 }

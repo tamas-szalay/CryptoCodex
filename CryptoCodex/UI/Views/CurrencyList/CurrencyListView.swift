@@ -2,8 +2,8 @@ import SwiftUI
 
 struct CurrencyListView: View {
     @EnvironmentObject var router: Router
-    @ObservedObject var viewModel: CurrencyViewModel
-
+    @ObservedObject var viewModel: CurrencyListViewModel
+    
     var body: some View {
         Background {
             switch viewModel.state {
@@ -18,7 +18,7 @@ struct CurrencyListView: View {
                     List {
                         ForEach(result) { currency in
                             CurrencyListCard(action: {
-                                router.navigateTo(.currencyDetails)
+                                router.navigateTo(.currencyDetails(currency))
                             }, currency: currency)
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
@@ -33,22 +33,28 @@ struct CurrencyListView: View {
                 }
             case .failed:
                 VStack(alignment: .center, spacing: 20) {
-                    Image(systemName: "xmark.circle").resizable().frame(width: 50, height: 50, alignment: .center)
-                    Text("Error").font(.applicationRegular(size: 20))
+
+                    Text("CurrencyListErrorMessage").font(.applicationBold(size: 24))
+                    Button {
+                        viewModel.load()
+                    } label: {
+                        Image(systemName: "arrow.clockwise.circle").font(.system(size: 60))
+                    }.tint(.fgDefault)
+
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             case .empty:
                 VStack(alignment: .center, spacing: 20) {
                     Image(systemName: "doc").resizable().frame(width: 50, height: 50, alignment: .center)
-                    Text("No results found").font(.applicationRegular(size: 20))
+                    Text("CurrencyListEmptyMessage").font(.applicationRegular(size: 20))
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
-               NavigationTitle(text: "COINS")
+                NavigationTitle(text: String(localized: "CurrencyListScreenTitle"))
             }
-        
+            
         }
     }
 }
@@ -57,5 +63,5 @@ extension Currency: Identifiable {
 }
 
 #Preview {
-    CurrencyListView(viewModel: CurrencyViewModel(currencyService: DIContainer.shared.resolve()))
+    CurrencyListView(viewModel: CurrencyListViewModel(currencyService: DIContainer.shared.resolve()))
 }

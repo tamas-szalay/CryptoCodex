@@ -19,7 +19,7 @@ struct MockHttpConnection: HttpConnection {
         queryParameters: [String: String]?,
         body: Codable?
     ) -> AnyPublisher<T, CCError> {
-        switch mockCallback(endpoint.rawValue, method.rawValue, queryParameters) {
+        switch mockCallback(endpoint.asPathComponent, method.rawValue, queryParameters) {
         case .success(let response):
             let data = try! JSONDecoder().decode(T.self, from: response)
             return Just(data)
