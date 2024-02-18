@@ -43,7 +43,7 @@ struct CurrencyDetailsView: View {
                     
                     if viewModel.state == .loading {
                         Color.white.opacity(0.7)
-                        ProgressView()
+                        ProgressView().tint(.fgDefault)
                     }
                         
                 }

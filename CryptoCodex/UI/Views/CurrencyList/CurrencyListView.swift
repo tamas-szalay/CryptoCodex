@@ -9,7 +9,7 @@ struct CurrencyListView: View {
             switch viewModel.state {
             case .loading:
                 ProgressView()
-                    .accessibility(identifier: "progress")
+                    .tint(.fgDefault)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .loaded(let result):
                 
@@ -29,7 +29,6 @@ struct CurrencyListView: View {
                         .scrollContentBackground(.hidden)
                         .listStyle(.plain)
                         .contentMargins(.bottom, 16, for: .scrollContent)
-                        .accessibility(identifier: "result")
                 }
             case .failed:
                 VStack(alignment: .center, spacing: 20) {
